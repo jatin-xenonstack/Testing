@@ -1,0 +1,165 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-03-31T14:52:59.815Z",
+    "end": "2025-03-31T15:00:32.546Z",
+    "duration": 452731,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5143e08f-ac9a-4463-b3e6-c6e8972548c7",
+      "title": "",
+      "fullFile": "/home/xs533-jatket/Testing_Project/test-main/test/functional_tests/report.js",
+      "file": "/functional_tests/report.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "29f7ec1a-baff-4ff3-a6c3-a5c47825a424",
+          "title": "Xenonstack Tests",
+          "fullFile": "/home/xs533-jatket/Testing_Project/test-main/test/functional_tests/report.js",
+          "file": "/functional_tests/report.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Xenonstack Tests\"",
+              "fullTitle": "Xenonstack Tests \"before all\" hook in \"Xenonstack Tests\"",
+              "timedOut": false,
+              "duration": 560,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser(\"chrome\").build();",
+              "err": {},
+              "uuid": "6ef7ac33-76a8-457c-a296-68e0a18e3739",
+              "parentUUID": "29f7ec1a-baff-4ff3-a6c3-a5c47825a424",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Xenonstack Tests\"",
+              "fullTitle": "Xenonstack Tests \"after all\" hook in \"Xenonstack Tests\"",
+              "timedOut": false,
+              "duration": 65,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "1bb41fc1-def7-4b8f-9bd3-f226ae8f2b8c",
+              "parentUUID": "29f7ec1a-baff-4ff3-a6c3-a5c47825a424",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should test all buttons on the website",
+              "fullTitle": "Xenonstack Tests should test all buttons on the website",
+              "timedOut": false,
+              "duration": 403840,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get(\"https://www.xenonstack.com/\");\nawait driver.executeScript(\n  \"window.scrollTo(0, document.body.scrollHeight);\"\n);\nawait driver.sleep(1000);\nawait clickElement(\n  driver,\n  By.xpath(\n    \"//a[@href='https://www.xenonstack.com/agentic-platforms/akira-ai/']//div[@class='product-button']//p[contains(text(),'Explore Further')]\"\n  )\n);\nawait driver.navigate().back();\nawait clickElement(\n  driver,\n  By.xpath(\n    \"//a[@href='https://www.xenonstack.com/agentic-platforms/elixirdata/']//div[@class='product-button']//p[contains(text(),'Explore Further')]\"\n  )\n);\nawait driver.navigate().back();\nawait clickElement(\n  driver,\n  By.xpath(\n    \"//section[@id='product-main-section-three']//div[@class='product-button']\"\n  )\n);\nawait driver.navigate().back();\nawait clickElement(\n  driver,\n  By.xpath(\n    \"//a[@href='https://www.xenonstack.com/agentic-platforms/nexastack-unified-inference/']//div[@class='product-button']//p[contains(text(),'Explore Further')]\"\n  )\n);\nawait driver.navigate().back();\nawait clickElement(\n  driver,\n  By.xpath(\"//p[normalize-space()='Discover Now']\")\n);\nawait driver.navigate().back();\nawait clickElement(\n  driver,\n  By.xpath(\n    \"//a[@href='https://www.xenonstack.com/agentic-platforms/metasecure/']//div[@class='product-button']//p[contains(text(),'Explore Further')]\"\n  )\n);\nawait driver.navigate().back();\nawait clickElement(\n  driver,\n  By.xpath(\n    \"//a[@href='https://www.xenonstack.com/agentic-platforms/neural-ai/']//div[@class='product-button']//p[contains(text(),'Explore Further')]\"\n  )\n);\nawait driver.navigate().back();\nawait clickElement(\n  driver,\n  By.xpath(\"//div[@class='first-mid-banner-button']\")\n);\nawait driver.executeScript(\"window.scrollTo(0, 0);\");\nawait driver.sleep(1000);\nawait clickElement(\n  driver,\n  By.xpath(\"//div[@class='second-mid-banner-button']//a[@href='https://xenonify.ai/']\")\n);\nawait driver.executeScript(\n  \"window.scrollTo(0, document.body.scrollHeight);\"\n);\nawait driver.sleep(1000);\nawait driver.navigate().back();\nconsole.log(\"All buttons are working properly\");",
+              "err": {
+                "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class='second-mid-banner-button']//a[@href='https://xenonify.ai/']\"}\n  (Session info: chrome=134.0.6998.88)",
+                "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class='second-mid-banner-button']//a[@href='https://xenonify.ai/']\"}\n  (Session info: chrome=134.0.6998.88)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:521:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:524:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:456:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules/selenium-webdriver/lib/webdriver.js:745:17)\n    at async clickElement (functional_tests/report.js:7:19)\n    at async Context.<anonymous> (functional_tests/report.js:433:5)",
+                "diff": null
+              },
+              "uuid": "bda8272c-2389-4d8b-9d5f-aec75a144ee8",
+              "parentUUID": "29f7ec1a-baff-4ff3-a6c3-a5c47825a424",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should check all footer links and throw an error if any link is not working",
+              "fullTitle": "Xenonstack Tests should check all footer links and throw an error if any link is not working",
+              "timedOut": false,
+              "duration": 48262,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser('chrome').build();\nconst wait = driver.manage().setTimeouts({ implicit: 10000, pageLoad: 10000, script: 10000 });\ntry {\n  logger.info('Ensuring All Footer Links Are Checked Without Skips.');\n  await driver.get('https://xenonstack.com/');\n  await pageLoader(driver);\n  let links = await extractLinks(driver, 'footer');\n  if (links.length === 0) {\n    logger.error('FOOTER TEST FAILED - No links found in the footer!');\n    throw new Error('No footer links found.');\n  }\n  const totalLinks = links.length;\n  logger.info(`Total Footer Links Found: ${totalLinks}`);\n  let idx = 0;\n  while (idx < totalLinks) {\n    let retries = 2;\n    while (retries > 0) {\n      try {\n        links = await extractLinks(driver, 'footer');\n        if (idx >= links.length) {\n          logger.warn(`Skipping missing link at index ${idx}`);\n          break;\n        }\n        const link = links[idx];\n        let linkText = (await link.getText()).trim();\n        const href = await link.getAttribute('href');\n        if (!linkText) {\n          try {\n            const img = await link.findElement(By.tagName('img'));\n            const altText = await img.getAttribute('alt');\n            if (altText) {\n              linkText = altText.trim();\n            }\n          } catch (err) {\n            // Ignore NoSuchElementException\n          }\n          if (!linkText) {\n            linkText = 'N/A';\n          }\n        }\n        if (!href) {\n          logger.error(`Skipping '${linkText}' - No href attribute.`);\n          throw new Error(`Skipping '${linkText}' - No href attribute.`);\n        }\n        logger.info(`Checking Footer Link ${idx + 1}/${totalLinks}: ${href} -> ${linkText}`);\n        if (!href.toLowerCase().includes('xenonstack.com')) {\n          await checkExternalLink(href, linkText);\n        } else {\n          const oldUrl = await driver.getCurrentUrl();\n          await checkInternalLink(driver, link, linkText, oldUrl);\n        }\n        break;\n      } catch (err) {\n        retries -= 1;\n        logger.warn('Stale element error. Retrying...');\n      }\n    }\n    idx += 1;\n  }\n  logger.info('Footer Test Completed Successfully.');\n} finally {\n  await driver.quit();\n}",
+              "err": {
+                "message": "ReferenceError: pageLoader is not defined",
+                "estack": "ReferenceError: pageLoader is not defined\n    at Context.<anonymous> (functional_tests/report.js:747:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "20606e42-731a-4eea-b1e5-91330dee1f30",
+              "parentUUID": "29f7ec1a-baff-4ff3-a6c3-a5c47825a424",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bda8272c-2389-4d8b-9d5f-aec75a144ee8",
+            "20606e42-731a-4eea-b1e5-91330dee1f30"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 452102,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 700000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
